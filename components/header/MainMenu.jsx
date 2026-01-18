@@ -74,7 +74,7 @@ const MainMenu = () => {
           </li>
           {/* End li (home mega menu) */}
 
-          <li style={{ visibility: "hidden" }}  className="nav-item  dropdown">
+          <li   className="nav-item  dropdown">
             <a
               // className="nav-link dropdown-toggle"
               className={
@@ -86,7 +86,7 @@ const MainMenu = () => {
                   ? "nav-link dropdown-toggle active-menu"
                   : "nav-link "
               }
-              href="/pages-menu/about-us-v3"
+              href="/about"
                role="button"
               // data-bs-toggle="dropdown"
               // data-bs-auto-close="outside"
