@@ -1,5 +1,6 @@
 import HeroSubscribe from "./HeroSubscribe";
 import Illustration from "./Illustration";
+import Link from "next/link";
 
 const Hero = () => {
   return (
@@ -18,12 +19,18 @@ const Hero = () => {
 
           {/* CTA Buttons */}
           <div className="cta-buttons-wrapper d-flex flex-wrap gap-3 mb-50">
-            <button className="btn btn-primary btn-lg px-4 py-3 fw-500 text-uppercase ls-1">
+            <Link
+              href="/#contact"
+              className="btn btn-primary btn-lg px-4 py-3 fw-600 text-uppercase ls-1"
+            >
               Get Free Financial Plan
-            </button>
-            <button className="btn btn-outline-primary btn-lg px-4 py-3 fw-500 text-uppercase ls-1">
+            </Link>
+            <Link
+              href="/#services"
+              className="btn btn-outline-primary btn-lg px-4 py-3 fw-600 text-uppercase ls-1"
+            >
               Explore Our Services
-            </button>
+            </Link>
           </div>
 
           {/* Trust Indicators */}

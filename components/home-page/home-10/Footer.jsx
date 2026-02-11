@@ -1,23 +1,26 @@
+import Link from "next/link";
+import Image from "next/image";
+
 const Footer = () => {
   const footerData = {
     company: [
       { name: "About", href: "/about" },
-      { name: "Careers", href: "/careers" },
-      { name: "Contact", href: "/contact" }
+      { name: "Contact", href: "/#contact" },
+      { name: "Disclaimers", href: "/disclaimer" }
     ],
     services: [
-      { name: "Insurance", href: "/insurance" },
-      { name: "Investments", href: "/investments" },
-      { name: "Retirement", href: "/retirement" }
+      { name: "Insurance", href: "/#services" },
+      { name: "Investments", href: "/#services" },
+      { name: "Retirement", href: "/#services" }
     ],
     resources: [
-      { name: "Blog", href: "/blog" },
-      { name: "FAQs", href: "/faqs" },
-      { name: "Calculators", href: "/calculators" }
+      { name: "How it works", href: "/#how-it-works" },
+      { name: "Our Partners", href: "/#partners" },
+      { name: "Testimonials", href: "/#testimonials" }
     ],
     legal: [
-      { name: "Privacy", href: "/privacy" },
-      { name: "Terms", href: "/terms" },
+      { name: "Privacy Policy", href: "/privacy" },
+      { name: "Terms & Conditions", href: "/terms" },
       { name: "Disclaimer", href: "/disclaimer" }
     ]
   };
@@ -31,20 +34,12 @@ const Footer = () => {
 
   const contactInfo = {
     phone: "+91 9999999999",
-    email: "info@insurvest.com",
-    address: "123 Financial District, Business Park, Ghaziabad, UP 201001",
+    email: "contact@insurvest.in",
+    address: "OFFICE NO 1041A, GAUR CITY MALL, Gautam Buddha Nagar, 201318, Uttar Pradesh",
     whatsapp: "+91 9999999999"
   };
 
-  const handleLinkClick = (href) => {
-    console.log(`Navigating to: ${href}`);
-    // Add your navigation logic here
-  };
-
-  const handleContactClick = (type, value) => {
-    console.log(`Contact clicked: ${type} - ${value}`);
-    // Add your contact logic here
-  };
+  const isExternal = (href) => /^https?:\/\//.test(href) || href === "#";
 
   return (
     <footer className="footer-section">
@@ -58,11 +53,17 @@ const Footer = () => {
             <div className="col-lg-4 col-md-6 mb-50 lg-mb-40">
               <div className="footer-brand">
                 <div className="brand-logo mb-4">
-                  <h3 className="brand-name fw-bold mb-3">
-                    <span className="insur-text">INSUR</span>
-                    <span className="vest-text">VEST</span>
-                  </h3>
-                  <p className="brand-tagline fs-14  mb-0 fw-500 text-uppercase ls-1">
+                  <Link href="/" className="d-inline-block">
+                    <Image
+                      src="/images/logo/logo_01.jpg"
+                      alt="INSURVEST - Insurance Marketing Firm"
+                      width={180}
+                      height={80}
+                      className="footer-logo"
+                      style={{width: 'auto'}}
+                    />
+                  </Link>
+                  <p className="brand-tagline fs-14  mb-0 mt-2 fw-500 text-uppercase ls-1">
                     Insurance Marketing Firm
                   </p>
                 </div>
@@ -107,16 +108,15 @@ const Footer = () => {
                     <ul className="nav-links list-unstyled">
                       {footerData.company.map((link) => (
                         <li key={link.name} className="nav-item mb-2">
-                          <a 
-                            href={link.href}
-                            className="nav-link"
-                            // onClick={(e) => {
-                            //   e.preventDefault();
-                            //   handleLinkClick(link.href);
-                            // }}
-                          >
-                            {link.name}
-                          </a>
+                          {isExternal(link.href) ? (
+                            <a href={link.href} className="nav-link">
+                              {link.name}
+                            </a>
+                          ) : (
+                            <Link href={link.href} className="nav-link">
+                              {link.name}
+                            </Link>
+                          )}
                         </li>
                       ))}
                     </ul>
@@ -130,16 +130,15 @@ const Footer = () => {
                     <ul className="nav-links list-unstyled">
                       {footerData.services.map((link) => (
                         <li key={link.name} className="nav-item mb-2">
-                          <a 
-                            href={link.href}
-                            className="nav-link"
-                            // onClick={(e) => {
-                            //   e.preventDefault();
-                            //   handleLinkClick(link.href);
-                            // }}
-                          >
-                            {link.name}
-                          </a>
+                          {isExternal(link.href) ? (
+                            <a href={link.href} className="nav-link">
+                              {link.name}
+                            </a>
+                          ) : (
+                            <Link href={link.href} className="nav-link">
+                              {link.name}
+                            </Link>
+                          )}
                         </li>
                       ))}
                     </ul>
@@ -153,16 +152,15 @@ const Footer = () => {
                     <ul className="nav-links list-unstyled">
                       {footerData.resources.map((link) => (
                         <li key={link.name} className="nav-item mb-2">
-                          <a 
-                            href={link.href}
-                            className="nav-link"
-                            // onClick={(e) => {
-                            //   e.preventDefault();
-                            //   handleLinkClick(link.href);
-                            // }}
-                          >
-                            {link.name}
-                          </a>
+                          {isExternal(link.href) ? (
+                            <a href={link.href} className="nav-link">
+                              {link.name}
+                            </a>
+                          ) : (
+                            <Link href={link.href} className="nav-link">
+                              {link.name}
+                            </Link>
+                          )}
                         </li>
                       ))}
                     </ul>
@@ -176,16 +174,15 @@ const Footer = () => {
                     <ul className="nav-links list-unstyled">
                       {footerData.legal.map((link) => (
                         <li key={link.name} className="nav-item mb-2">
-                          <a 
-                            href={link.href}
-                            className="nav-link"
-                            // onClick={(e) => {
-                            //   e.preventDefault();
-                            //   handleLinkClick(link.href);
-                            // }}
-                          >
-                            {link.name}
-                          </a>
+                          {isExternal(link.href) ? (
+                            <a href={link.href} className="nav-link">
+                              {link.name}
+                            </a>
+                          ) : (
+                            <Link href={link.href} className="nav-link">
+                              {link.name}
+                            </Link>
+                          )}
                         </li>
                       ))}
                     </ul>
@@ -259,11 +256,19 @@ const Footer = () => {
 
         {/* Footer Bottom */}
         <div className="footer-bottom">
-          <div className="row align-items-center">
+          <div className="row">
+            <div className="col-12 mb-3">
+              <p className="disclaimer-text fs-11 text-white mb-2 fw-600">
+                BEWARE OF SPURIOUS PHONE CALLS AND FICTITIOUS / FRAUDULENT OFFERS
+              </p>
+              <p className="disclaimer-text fs-11 text-white mb-0">
+                IRDAI or its officials do not involve in activities like selling insurance policies, announcing bonus or investment of premiums. Public receiving such phone calls are requested to lodge a police complaint.
+              </p>
+            </div>
             <div className="col-md-6">
               <p className="copyright-text fs-14  mb-0">
                 © {new Date().getFullYear()} INSURVEST. All rights reserved. 
-                <span className="ms-2">IRDAI Reg. No.: IMF/XX/XXXXX</span>
+                <span className="ms-2">IRDAI Reg. No.: IMF09670920250855</span>
               </p>
             </div>
             <div className="col-md-6 text-md-end text-start mt-md-0 mt-3">

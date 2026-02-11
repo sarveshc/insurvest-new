@@ -11,15 +11,6 @@ const WhyChooseUs = () => {
     },
     {
       id: 2,
-      icon: "bi-person-badge",
-      image: "/images/features/anonymous-quotes.svg",
-      title: "Anonymous Quotes",
-      description: "Get unbiased quotes without sharing personal details upfront",
-      iconColor: "text-success",
-      bgColor: "bg-success-soft"
-    },
-    {
-      id: 3,
       icon: "bi-calculator",
       image: "/images/features/right-amount.svg",
       title: "Right Amount and Term",
@@ -28,16 +19,16 @@ const WhyChooseUs = () => {
       bgColor: "bg-info-soft"
     },
     {
-      id: 4,
+      id: 3,
       icon: "bi-trophy",
       image: "/images/features/cheap-not-best.svg",
-      title: "Cheap isn't always best",
+      title: "Don't choose by price, choose by value",
       description: "We focus on value and comprehensive coverage, not just low prices",
       iconColor: "text-warning",
       bgColor: "bg-warning-soft"
     },
     {
-      id: 5,
+      id: 4,
       icon: "bi-person-heart",
       image: "/images/features/relationship-manager.svg",
       title: "Dedicated Relationship Manager",
@@ -46,7 +37,7 @@ const WhyChooseUs = () => {
       bgColor: "bg-danger-soft"
     },
     {
-      id: 6,
+      id: 5,
       icon: "bi-headset",
       image: "/images/features/claim-assistance.svg",
       title: "Service and Claim Assistance",
@@ -55,7 +46,7 @@ const WhyChooseUs = () => {
       bgColor: "bg-purple-soft"
     },
     {
-      id: 7,
+      id: 6,
       icon: "bi-x-circle",
       image: "/images/features/freelook-cancellation.svg",
       title: "Freelook Cancellation",
@@ -101,8 +92,6 @@ const WhyChooseUs = () => {
                   <h5 className="feature-title fw-600 tx-dark mb-2 text-center" style={titleStyle}>
                     {feature.title}
                   </h5>
-                  
-                  
                 </div>
               </div>
             </div>
@@ -114,7 +103,7 @@ const WhyChooseUs = () => {
           <div className="col-12 text-center">
             <div className="trust-message">
               <p className="fs-18 fw-500 text-muted mb-0">
-                Join <span className="text-primary fw-600">10,000+</span> satisfied customers who trust us with their financial future
+                Join <span className="text-primary fw-600">1000+</span> satisfied customers who trust us with their financial future
               </p>
             </div>
           </div>

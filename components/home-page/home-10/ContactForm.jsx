@@ -13,6 +13,7 @@ const ContactForm = () => {
   const [errors, setErrors] = useState({});
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitStatus, setSubmitStatus] = useState('');
+  const [statusMessage, setStatusMessage] = useState('');
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -67,11 +68,24 @@ const ContactForm = () => {
     setIsSubmitting(true);
     setSubmitStatus('');
     
-    // Simulate API call
-    setTimeout(() => {
-      console.log('Form submitted:', formData);
+    try {
+      const response = await fetch('/api/contact', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(formData),
+      });
+
+      const data = await response.json();
+
+      if (!response.ok) {
+        throw new Error(data.error || 'Failed to send message');
+      }
+
+      // Success
       setSubmitStatus('success');
-      setIsSubmitting(false);
+      setStatusMessage(data.message || 'Thank you! We\'ll get back to you soon.');
       setFormData({
         name: '',
         email: '',
@@ -80,12 +94,27 @@ const ContactForm = () => {
       });
       
       // Clear success message after 5 seconds
-      setTimeout(() => setSubmitStatus(''), 5000);
-    }, 2000);
+      setTimeout(() => {
+        setSubmitStatus('');
+        setStatusMessage('');
+      }, 5000);
+    } catch (error) {
+      console.error('Error submitting form:', error);
+      setSubmitStatus('error');
+      setStatusMessage(error.message || 'Failed to send message. Please try again.');
+      
+      // Clear error message after 5 seconds
+      setTimeout(() => {
+        setSubmitStatus('');
+        setStatusMessage('');
+      }, 5000);
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   return (
-    <section className="contact-form-section py-100 lg-py-80" style={{ backgroundColor: '#f8f9fa' }}>
+    <section id="contact" className="contact-form-section py-100 lg-py-80" style={{ backgroundColor: '#f8f9fa' }}>
       <div className="container">
         <div className="row align-items-center">
           
@@ -248,11 +277,18 @@ const ContactForm = () => {
                     )}
                   </button>
 
-                  {/* Success Message */}
+                  {/* Success/Error Messages */}
                   {submitStatus === 'success' && (
                     <div className="alert alert-success mt-3 d-flex align-items-center" role="alert">
                       <i className="bi bi-check-circle-fill me-2"></i>
-                      Thank you! We'll get back to you soon.
+                      {statusMessage || 'Thank you! We\'ll get back to you soon.'}
+                    </div>
+                  )}
+                  
+                  {submitStatus === 'error' && (
+                    <div className="alert alert-danger mt-3 d-flex align-items-center" role="alert">
+                      <i className="bi bi-exclamation-triangle-fill me-2"></i>
+                      {statusMessage || 'Failed to send message. Please try again.'}
                     </div>
                   )}
                 </form>
@@ -265,9 +301,9 @@ const ContactForm = () => {
                       <i className="bi bi-telephone-fill me-2 text-primary"></i>
                       <span className="text-dark">+91 9999999999</span>
                     </a>
-                    <a href="mailto:info@insurvest.com" className="contact-option d-flex align-items-center text-decoration-none">
+                    <a href="mailto:contact@insurvest.in" className="contact-option d-flex align-items-center text-decoration-none">
                       <i className="bi bi-envelope-fill me-2 text-primary"></i>
-                      <span className="text-dark">info@insurvest.com</span>
+                      <span className="text-dark">contact@insurvest.in</span>
                     </a>
                   </div>
                 </div>

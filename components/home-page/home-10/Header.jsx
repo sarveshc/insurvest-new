@@ -4,10 +4,12 @@ import { useEffect, useState } from "react";
 import MainMenu from "../../header/MainMenu";
 import Link from "next/link";
 import Image from "next/image";
+import { usePathname } from "next/navigation";
 
 const Header = () => {
   const [navbar, setNavbar] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const pathname = usePathname();
 
   const changeBackground = () => {
     if (window.scrollY >= 10) {
@@ -23,6 +25,23 @@ const Header = () => {
       window.removeEventListener("scroll", changeBackground);
     };
   }, []);
+
+  // Close the mobile overlay on route change
+  useEffect(() => {
+    setIsMobileMenuOpen(false);
+  }, [pathname]);
+
+  // Prevent body scroll when mobile menu is open
+  useEffect(() => {
+    if (isMobileMenuOpen) {
+      document.body.style.overflow = 'hidden';
+    } else {
+      document.body.style.overflow = '';
+    }
+    return () => {
+      document.body.style.overflow = '';
+    };
+  }, [isMobileMenuOpen]);
 
   const handleAdvisorClick = () => {
     console.log("Talk to Advisor clicked");
@@ -41,8 +60,8 @@ const Header = () => {
   return (
     <>
       <header
-        className={`theme-main-menu sticky-menu theme-menu-enhanced ${
-          navbar ? "fixed scrolled" : ""
+        className={`theme-main-menu sticky-menu theme-menu-enhanced fixed ${
+          navbar ? "scrolled" : ""
         }`}
       >
         <div className="inner-content position-relative">
@@ -66,8 +85,8 @@ const Header = () => {
             </div>
 
             {/* Navigation Menu - Desktop */}
-            <div className="main-nav order-lg-1 d-none d-lg-block">
-              <MainMenu />
+            <div className="main-nav order-lg-1 d-none d-lg-flex">
+              <MainMenu variant="desktop" />
             </div>
 
             {/* CTA Buttons Section */}
@@ -112,7 +131,7 @@ const Header = () => {
         <div className={`mobile-menu-overlay ${isMobileMenuOpen ? 'active' : ''}`}>
           <div className="mobile-menu-content">
             <div className="mobile-nav-wrapper">
-              <MainMenu />
+              <MainMenu variant="mobile" onNavigate={() => setIsMobileMenuOpen(false)} />
             </div>
             
             {/* Mobile CTA Buttons */}
@@ -150,8 +169,8 @@ const Header = () => {
               </div>
               <div className="contact-item d-flex align-items-center mb-3">
                 <i className="bi bi-envelope-fill me-3 text-primary"></i>
-                <a href="mailto:info@insurvest.com" className="contact-link">
-                  info@insurvest.com
+                <a href="mailto:contact@insurvest.in" className="contact-link">
+                  contact@insurvest.in
                 </a>
               </div>
               <div className="contact-item d-flex align-items-center">

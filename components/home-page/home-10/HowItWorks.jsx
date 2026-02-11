@@ -44,7 +44,7 @@ const HowItWorks = () => {
   };
 
   return (
-    <section className="how-it-works-section pt-50 pb-50  py-100 lg-py-80">
+    <section id="how-it-works" className="how-it-works-section pt-50 pb-50  py-100 lg-py-80">
       <div className="container">
         <div className="row">
           <div className="col-12">

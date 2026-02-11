@@ -96,9 +96,9 @@ const ContactSection = () => {
                     <i className="bi bi-telephone-fill text-primary me-2"></i>
                     <span className="text-dark fw-500">+91 9999999999</span>
                   </a>
-                  <a href="mailto:info@insurvest.com" className="quick-contact-item text-decoration-none">
+                  <a href="mailto:contact@insurvest.in" className="quick-contact-item text-decoration-none">
                     <i className="bi bi-envelope-fill text-primary me-2"></i>
-                    <span className="text-dark fw-500">info@insurvest.com</span>
+                    <span className="text-dark fw-500">contact@insurvest.in</span>
                   </a>
                 </div>
               </div>

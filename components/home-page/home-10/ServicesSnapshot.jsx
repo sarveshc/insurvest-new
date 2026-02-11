@@ -48,7 +48,7 @@ const ServicesSnapshot = () => {
   };
 
   return (
-    <section className="services-snapshot-section pt-50 pb-50 py-100 lg-py-80">
+    <section id="services" className="services-snapshot-section pt-50 pb-50 py-100 lg-py-80">
       <div className="container">
         <div className="row">
           <div className="col-12">

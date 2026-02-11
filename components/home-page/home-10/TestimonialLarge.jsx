@@ -96,8 +96,8 @@ const TestimonialLarge = () => {
               {/* <p>Photographer</p> */}
               <p className="text-muted">
                 <i className="fas fa-quote-left pe-2"></i>
-                 The team at epolicymart has helped me understand the nuances of various products and help me make an informed decision in selecting different insurance products.
-They have been a great support by providing prompt service in times of my need.I highly recommend epolicymart as the choice of provider of all your insurance needs.Thank you for your guidance & support. 
+                 The team at Insurvest has helped me understand the nuances of various products and help me make an informed decision in selecting different insurance products.
+They have been a great support by providing prompt service in times of my need.I highly recommend Insurvest as the choice of provider of all your insurance needs.Thank you for your guidance & support. 
                 </p>
              
             </div>

@@ -1,93 +1,46 @@
 const OurPartners = () => {
+  // Tie-up partner logos from folder (HDFC Life, HDFC Ergo, ICICI Prudential, Edelweiss Tokio, Universal Sompo, Digit, Royal Sundaram, Star, Aviva - removed per client)
   const partners = [
     {
       id: 1,
-      name: "HDFC Life",
-      logo: "/images/partners/1.b0d59032.svg",
-      category: "Life Insurance",
-      description: "Leading private life insurer"
-    },
-    {
-      id: 2,
-      name: "ICICI Prudential",
-      logo: "/images/partners/2.456baa38.svg",
-      category: "Life Insurance",
-      description: "Trusted life insurance solutions"
-    },
-    {
-      id: 3,
-      name: "HDFC ERGO",
-      logo: "/images/partners/3.ddb82421.svg",
-      category: "General Insurance",
-      description: "Comprehensive general insurance"
-    },
-    {
-      id: 4,
       name: "Care Health",
       logo: "/images/partners/4.bd882852.svg",
       category: "Health Insurance",
       description: "Specialized health coverage"
     },
     {
-      id: 5,
-      name: "Edelweiss Tokio",
-      logo: "/images/partners/5.2b79da98.svg",
-      category: "Life Insurance",
-      description: "Innovative life solutions"
-    },
-    {
-      id: 6,
+      id: 2,
       name: "Shriram Life",
       logo: "/images/partners/6.0147ba86.svg",
       category: "Life Insurance",
       description: "Affordable life insurance"
     },
     {
-      id: 7,
+      id: 3,
       name: "Niva Bupa",
       logo: "/images/partners/7.ac0cca21.svg",
       category: "Health Insurance",
       description: "Premium health insurance"
     },
     {
-      id: 8,
-      name: "Digit Insurance",
-      logo: "/images/partners/p1.ad5ce97f.png",
-      category: "General Insurance",
-      description: "Digital-first insurance"
-    },
-    {
-      id: 9,
-      name: "Royal Sundaram",
-      logo: "/images/partners/p2.95147cbe.jpg",
-      category: "General Insurance",
-      description: "Oldest private insurer"
-    },
-    {
-      id: 10,
-      name: "Star Health",
-      logo: "/images/partners/p3.bb986063.png",
-      category: "Health Insurance",
-      description: "Health insurance specialist"
-    },
-    {
-      id: 11,
-      name: "Aviva Life",
-      logo: "/images/partners/p4.445df401.jpg",
-      category: "Life Insurance",
-      description: "Global insurance expertise"
-    },
-    {
-      id: 12,
+      id: 4,
       name: "TATA AIG",
       logo: "/images/partners/p5.559fa91d.png",
       category: "General Insurance",
       description: "Trusted TATA brand"
-    }
+    },
+    // Tie-up partners from logo folder
+    { id: 5, name: "Partner 5", logo: "/images/logo/Plogo-1.png", category: "Insurance", description: "Trusted partner" },
+    { id: 6, name: "Partner 6", logo: "/images/logo/Plogo-2.png", category: "Insurance", description: "Trusted partner" },
+    { id: 7, name: "Partner 7", logo: "/images/logo/Plogo-3.png", category: "Insurance", description: "Trusted partner" },
+    { id: 8, name: "Partner 8", logo: "/images/logo/Plogo-4.png", category: "Insurance", description: "Trusted partner" },
+    { id: 9, name: "Partner 9", logo: "/images/logo/Plogo-5.png", category: "Insurance", description: "Trusted partner" },
+    { id: 10, name: "Partner 10", logo: "/images/logo/Plogo-6.png", category: "Insurance", description: "Trusted partner" },
+    { id: 11, name: "Partner 11", logo: "/images/logo/Plogo-7.png", category: "Insurance", description: "Trusted partner" }
   ];
 
   return (
-    <section className="partners-section pt-100 pb-100 lg-pt-80 lg-pb-80">
+    <section id="partners" className="partners-section pt-100 pb-100 lg-pt-80 lg-pb-80">
       <div className="container">
         {/* Section Header */}
         <div className="row">
@@ -136,17 +89,17 @@ const OurPartners = () => {
 
         {/* Trust Indicators */}
         <div className="trust-indicators-wrapper mt-60 lg-mt-40">
-          <div className="row gx-4 gy-3 text-center">
-            <div className="col-lg-3 col-md-6">
+          <div className="row gx-4 gy-3 text-center justify-content-center">
+            <div className="col-lg-4 col-md-6">
               <div className="trust-indicator">
                 <div className="indicator-icon mb-2">
                   <i className="bi bi-building fs-24 text-primary"></i>
                 </div>
-                <h4 className="indicator-value fw-bold tx-dark mb-1">12+</h4>
+                <h4 className="indicator-value fw-bold tx-dark mb-1">10+</h4>
                 <p className="indicator-label fs-14 text-muted mb-0">Insurance Partners</p>
               </div>
             </div>
-            <div className="col-lg-3 col-md-6">
+            <div className="col-lg-4 col-md-6">
               <div className="trust-indicator">
                 <div className="indicator-icon mb-2">
                   <i className="bi bi-shield-check fs-24 text-success"></i>
@@ -155,21 +108,12 @@ const OurPartners = () => {
                 <p className="indicator-label fs-14 text-muted mb-0">Claim Support</p>
               </div>
             </div>
-            <div className="col-lg-3 col-md-6">
-              <div className="trust-indicator">
-                <div className="indicator-icon mb-2">
-                  <i className="bi bi-currency-rupee fs-24 text-warning"></i>
-                </div>
-                <h4 className="indicator-value fw-bold tx-dark mb-1">₹50Cr+</h4>
-                <p className="indicator-label fs-14 text-muted mb-0">Policies Sold</p>
-              </div>
-            </div>
-            <div className="col-lg-3 col-md-6">
+            <div className="col-lg-4 col-md-6">
               <div className="trust-indicator">
                 <div className="indicator-icon mb-2">
                   <i className="bi bi-people fs-24 text-info"></i>
                 </div>
-                <h4 className="indicator-value fw-bold tx-dark mb-1">10K+</h4>
+                <h4 className="indicator-value fw-bold tx-dark mb-1">1000+</h4>
                 <p className="indicator-label fs-14 text-muted mb-0">Happy Families</p>
               </div>
             </div>

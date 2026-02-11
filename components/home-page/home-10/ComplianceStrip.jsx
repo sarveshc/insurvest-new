@@ -4,7 +4,7 @@ const ComplianceStrip = () => {
       id: 1,
       icon: "bi-shield-check",
       title: "IRDAI Reg. No.",
-      detail: "IMF/XX/XXXXX",
+      detail: "IMF09670920250855",
       iconColor: "text-primary"
     },
     {
@@ -27,13 +27,6 @@ const ComplianceStrip = () => {
       title: "Govt. of India Schemes",
       detail: "NSC, PPF, etc.",
       iconColor: "text-warning"
-    },
-    {
-      id: 5,
-      icon: "bi-award",
-      title: "ISO-Certified",
-      detail: "Advisory",
-      iconColor: "text-danger"
     }
   ];
 
