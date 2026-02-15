@@ -297,9 +297,9 @@ const ContactForm = () => {
                 <div className="alternative-contact mt-5 pt-4 border-top">
                   <p className="text-muted mb-3 fw-500">Or reach us directly at:</p>
                   <div className="contact-options d-flex flex-wrap gap-4">
-                    <a href="tel:+919999999999" className="contact-option d-flex align-items-center text-decoration-none">
+                    <a href="tel:+919871487110" className="contact-option d-flex align-items-center text-decoration-none">
                       <i className="bi bi-telephone-fill me-2 text-primary"></i>
-                      <span className="text-dark">+91 9999999999</span>
+                      <span className="text-dark">+91 9871487110</span>
                     </a>
                     <a href="mailto:contact@insurvest.in" className="contact-option d-flex align-items-center text-decoration-none">
                       <i className="bi bi-envelope-fill me-2 text-primary"></i>

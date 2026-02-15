@@ -34,9 +34,9 @@ const OurPartners = () => {
     { id: 6, name: "Partner 6", logo: "/images/logo/Plogo-2.png", category: "Insurance", description: "Trusted partner" },
     { id: 7, name: "Partner 7", logo: "/images/logo/Plogo-3.png", category: "Insurance", description: "Trusted partner" },
     { id: 8, name: "Partner 8", logo: "/images/logo/Plogo-4.png", category: "Insurance", description: "Trusted partner" },
-    { id: 9, name: "Partner 9", logo: "/images/logo/Plogo-5.png", category: "Insurance", description: "Trusted partner" },
-    { id: 10, name: "Partner 10", logo: "/images/logo/Plogo-6.png", category: "Insurance", description: "Trusted partner" },
-    { id: 11, name: "Partner 11", logo: "/images/logo/Plogo-7.png", category: "Insurance", description: "Trusted partner" }
+    { id: 9, name: "Partner 9", logo: "/images/logo/bajaj-life-logo.avif", category: "Insurance", description: "Trusted partner" },
+    { id: 10, name: "Partner 10", logo: "/images/logo/LOB_Logo_6808a9002e_50f7457db2.webp", category: "Insurance", description: "Trusted partner" },
+    { id: 11, name: "Partner 11", logo: "/images/logo/Zuno image.avif", category: "Insurance", description: "Trusted partner" }
   ];
 
   return (

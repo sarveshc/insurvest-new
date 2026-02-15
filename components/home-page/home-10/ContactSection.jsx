@@ -92,9 +92,9 @@ const ContactSection = () => {
                 
                 {/* Quick Contact */}
                 <div className="quick-contact d-flex justify-content-center gap-4 flex-wrap">
-                  <a href="tel:+919999999999" className="quick-contact-item text-decoration-none">
+                  <a href="tel:+919871487110" className="quick-contact-item text-decoration-none">
                     <i className="bi bi-telephone-fill text-primary me-2"></i>
-                    <span className="text-dark fw-500">+91 9999999999</span>
+                    <span className="text-dark fw-500">+91 9871487110</span>
                   </a>
                   <a href="mailto:contact@insurvest.in" className="quick-contact-item text-decoration-none">
                     <i className="bi bi-envelope-fill text-primary me-2"></i>

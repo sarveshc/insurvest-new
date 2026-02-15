@@ -73,7 +73,7 @@ const Header = () => {
                 <div className="logo-wrapper d-flex align-items-center">
                   {/* Custom INSURVEST Logo */}
                   <Image
-                src="/images/logo/logo_01.jpg"
+                src="/images/logo/Logo Insurvest.png"
                 alt="logo"
                 width={200}
                 height={90}
@@ -163,8 +163,8 @@ const Header = () => {
             <div className="mobile-contact-info mt-4 pt-4 border-top">
               <div className="contact-item d-flex align-items-center mb-3">
                 <i className="bi bi-telephone-fill me-3 text-primary"></i>
-                <a href="tel:+919999999999" className="contact-link">
-                  +91 9999999999
+                <a href="tel:+919871487110" className="contact-link">
+                  +91 9871487110
                 </a>
               </div>
               <div className="contact-item d-flex align-items-center mb-3">
@@ -175,7 +175,7 @@ const Header = () => {
               </div>
               <div className="contact-item d-flex align-items-center">
                 <i className="bi bi-whatsapp me-3 text-success"></i>
-                <a href="https://wa.me/919999999999" className="contact-link">
+                <a href="https://wa.me/919871487110" className="contact-link">
                   WhatsApp Us
                 </a>
               </div>

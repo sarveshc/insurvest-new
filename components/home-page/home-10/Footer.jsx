@@ -33,10 +33,10 @@ const Footer = () => {
   ];
 
   const contactInfo = {
-    phone: "+91 9999999999",
+    phone: "+91 9871487110",
     email: "contact@insurvest.in",
     address: "OFFICE NO 1041A, GAUR CITY MALL, Gautam Buddha Nagar, 201318, Uttar Pradesh",
-    whatsapp: "+91 9999999999"
+    whatsapp: "+91 9871487110"
   };
 
   const isExternal = (href) => /^https?:\/\//.test(href) || href === "#";
@@ -55,7 +55,7 @@ const Footer = () => {
                 <div className="brand-logo mb-4">
                   <Link href="/" className="d-inline-block">
                     <Image
-                      src="/images/logo/logo_01.jpg"
+                      src="/images/logo/Logo Insurvest.png"
                       alt="INSURVEST - Insurance Marketing Firm"
                       width={180}
                       height={80}

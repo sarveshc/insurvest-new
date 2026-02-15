@@ -284,7 +284,7 @@ const TestimonialCircularStatic = () => {
                 <div style={styles.centerLogo}>
                   <div style={styles.logoWrapper}>
                     <img 
-                      src="/images/logo/logo_01.jpg" 
+                      src="/images/logo/Logo Insurvest.png" 
                       alt="INSURVEST"
                       style={styles.logoImage}
                       onError={(e) => {
