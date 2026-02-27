@@ -191,7 +191,7 @@ const AboutUsExtendedBootstrap = () => {
               <div className="trust-indicators d-flex flex-wrap justify-content-center align-items-center gap-4 mt-5">
                 <div className="trust-item d-flex align-items-center bg-white bg-opacity-10 px-4 py-3 rounded-pill backdrop-blur">
                   <i className="bi bi-people-fill me-2 fs-5"></i>
-                  <span className="fw-semibold">10,000+ Happy Clients</span>
+                  <span className="fw-semibold">1000+ Happy Clients</span>
                 </div>
                 <div className="trust-item d-flex align-items-center bg-white bg-opacity-10 px-4 py-3 rounded-pill backdrop-blur">
                   <i className="bi bi-currency-rupee me-2 fs-5"></i>
@@ -199,7 +199,7 @@ const AboutUsExtendedBootstrap = () => {
                 </div>
                 <div className="trust-item d-flex align-items-center bg-white bg-opacity-10 px-4 py-3 rounded-pill backdrop-blur">
                   <i className="bi bi-award me-2 fs-5"></i>
-                  <span className="fw-semibold">12+ Years Experience</span>
+                  <span className="fw-semibold">10+ nsurance Companies</span>
                 </div>
               </div>
             </div>
