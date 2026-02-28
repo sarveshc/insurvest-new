@@ -193,10 +193,10 @@ const AboutUsExtendedBootstrap = () => {
                   <i className="bi bi-people-fill me-2 fs-5"></i>
                   <span className="fw-semibold">1000+ Happy Clients</span>
                 </div>
-                <div className="trust-item d-flex align-items-center bg-white bg-opacity-10 px-4 py-3 rounded-pill backdrop-blur">
+             {/* <div className="trust-item d-flex align-items-center bg-white bg-opacity-10 px-4 py-3 rounded-pill backdrop-blur">
                   <i className="bi bi-currency-rupee me-2 fs-5"></i>
                   <span className="fw-semibold">₹50Cr+ Policies Sold</span>
-                </div>
+                </div> */}
                 <div className="trust-item d-flex align-items-center bg-white bg-opacity-10 px-4 py-3 rounded-pill backdrop-blur">
                   <i className="bi bi-award me-2 fs-5"></i>
                   <span className="fw-semibold">10+ nsurance Companies</span>
