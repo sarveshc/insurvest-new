@@ -99,7 +99,7 @@ const Header = () => {
                   onClick={handleAdvisorClick}
                 >
                   <i className="bi bi-telephone-fill me-2 fs-12"></i>
-                  Talk to an Advisor
+                  +91 9871487110
                 </button>
                 
                 <button 
@@ -144,7 +144,7 @@ const Header = () => {
                 }}
               >
                 <i className="bi bi-telephone-fill me-2"></i>
-                Talk to an Advisor Now
+                +91 9871487110
               </button>
               
               <button 

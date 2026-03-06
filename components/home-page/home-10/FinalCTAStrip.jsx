@@ -40,7 +40,7 @@ const FinalCTAStrip = () => {
                     // onClick={handleTalkToAdvisor}
                   >
                     <i className="bi bi-telephone-fill me-2"></i>
-                    Talk to an Advisor Now
+                    +91 9871487110
                   </button>
 
                   {/* Secondary CTA */}
