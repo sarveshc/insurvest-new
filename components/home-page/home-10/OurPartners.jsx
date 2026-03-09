@@ -8,13 +8,7 @@ const OurPartners = () => {
       category: "Health Insurance",
       description: "Specialized health coverage"
     },
-    {
-      id: 2,
-      name: "Shriram Life",
-      logo: "/images/partners/6.0147ba86.svg",
-      category: "Life Insurance",
-      description: "Affordable life insurance"
-    },
+    
     {
       id: 3,
       name: "Niva Bupa",
